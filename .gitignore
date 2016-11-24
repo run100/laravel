@@ -1,5 +1,6 @@
 # composer vendor dir
-# /vendor
+/vendor
+/bin/migrate/src/vendor
 
 # node.js npm packages
 /node_modules
