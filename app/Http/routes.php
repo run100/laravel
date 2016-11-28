@@ -11,33 +11,35 @@
 |
 */
 
-Route::group(['as' => 'admin::'], function () {
-    Route::get('dashboard', ['as' => 'dashboard', function () {
-        // 路由被命名为 "admin::dashboard"
-        return "admin::dashboard";
-    }]);
-});
+Route::resource('photo', 'PhotoController');
 
-Route::any('user/{id}', function ($id) {
-    return 'foo'.$id;
-});
+//Route::group(['as' => 'admin::'], function () {
+//    Route::get('dashboard', ['as' => 'dashboard', function () {
+//        // 路由被命名为 "admin::dashboard"
+//        return "admin::dashboard";
+//    }]);
+//});
 
-Route::match(['get', 'post'], '/', function () {
-    return '2222';
-});
+//Route::any('user/{id}', function ($id) {
+//    return 'foo'.$id;
+//});
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::match(['get', 'post'], '/', function () {
+//    return '2222';
+//});
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 //Route::get('user/profile', ['as' => 'profile', 'uses'=> 'UserController@showProfile']);
 
 Route::get('user/profile', 'UserController@showProfile')->name('profile');
 
 
-Route::get('/hello/{id}/{name?}', function($id, $name = null){
-    return 'hello:'.$id.' name:'.$name;
-})->where(['name'=>'[\w\d]+']);
+//Route::get('/hello/{id}/{name?}', function($id, $name = null){
+//    return 'hello:'.$id.' name:'.$name;
+//})->where(['name'=>'[\w\d]+']);
 
 /*
 |--------------------------------------------------------------------------
