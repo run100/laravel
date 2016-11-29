@@ -19,6 +19,8 @@ class PhotoController extends Controller
         //echo __CLASS__;
         $resp = new Response();
         $resp->withCookie(cookie('name', 'val', 10000));
+        
+        return redirect()->action('PhotoController@show', [1]);
 
         //return $resp;
         //return response()->json(['name' => 'Abigail', 'state' => 'CA']);
@@ -62,7 +64,7 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-        //
+        echo $id;
     }
 
     /**
