@@ -64,7 +64,9 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-        echo $id;
+        // echo $id;
+
+        return view('child', ['name' => 'zhangzhw', 'records' => 1, 'time1'=> time()]);
     }
 
     /**
