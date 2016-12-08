@@ -34,7 +34,7 @@ Route::resource('photo', 'PhotoController');
 
 //Route::get('user/profile', ['as' => 'profile', 'uses'=> 'UserController@showProfile']);
 
-Route::get('user/profile', 'UserController@showProfile')->name('profile');
+//Route::get('user/profile', 'UserController@showProfile')->name('profile');
 
 
 //Route::get('/hello/{id}/{name?}', function($id, $name = null){
@@ -52,6 +52,5 @@ Route::get('user/profile', 'UserController@showProfile')->name('profile');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+//Route::group(['middleware' => ['web']], function () {
+//});
